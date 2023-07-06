@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-a type-annotated function floor
+A type-annotated function floor
 """
 import math
 
