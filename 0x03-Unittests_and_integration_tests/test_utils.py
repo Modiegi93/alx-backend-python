@@ -19,7 +19,7 @@ class TestAccessNestedMap(unittest.TestCase):
         """method returns what it is supposed to"""
         result = access_nested_map(nested_map, path)
         self.assertEqual(result, expected_result)
-    
+
     """test a KeyError is raised for the inputs below"""
     @parameterized.expand([
         ({}, ("a",)),
@@ -30,6 +30,7 @@ class TestAccessNestedMap(unittest.TestCase):
         with self.assertRaises(KeyError) as context:
             access_nested_map(nested_map, path)
         self.assertEqual(context.exception.args[0], path[-1])
+
 
 class TestGetJson(unittest.TestCase):
     """TestCase"""
@@ -54,7 +55,6 @@ class TestMemoize(unittest.TestCase):
             is returned but a_method is only called once using
             assert_called_once.
         """
-        
 
         class TestClass:
             """Test class"""
